@@ -64,10 +64,6 @@ a{
 	position: relative;
 }
 .out{
-	min-height: 100%;
-}
-.out_fb{
-	@extend .out;
 	padding-bottom: 123px;
 }
 //header
@@ -226,7 +222,7 @@ a{
 		@include sized-sprite($icons, 'devider-arr');
 		position: absolute;
 		top:-1px;
-		right:-7px; 
+		right:-8px; 
 	}
 	.arr-top{
 		display: block;
@@ -243,6 +239,7 @@ a{
 .footer{
 	text-align: center;
 	background: #919191;
+	margin-top: -29px;
 	.footer__link{
 		float: left;
 		text-transform: uppercase;
@@ -291,6 +288,15 @@ a{
 			@extend %hide-text;
 		}
 	}
+	.reg-mess{
+		color: #636363;
+		font-size: 12px;
+		text-transform: uppercase;
+		position: absolute;
+		left:0;
+		width: 100%;
+		top: -24px; 
+	}
 }
 .footer_big{
 	@extend .footer;
@@ -300,4 +306,117 @@ a{
 }
 
 
+.btn{
+	background: #fff;
+	box-shadow:0 1px 2px rgba(0,0,0,.7), 0 0 5px rgba(255,255,255,.8) inset;
+	border-radius:5px;
+	border:1px solid #e6e6e6;
+	height: 35px;
+	line-height: 35px;
+	color:#0062af;
+	text-decoration: none;
+	font-size: 18px;
+	text-shadow:0 1px 0 #fff;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 0 40px;
+	font-family: 'dincondc', Arial,sans-serif; 
+	cursor: pointer;
+	@include background-image(linear-gradient(#fefefe 0%, #f5f5f5 26%, #dadada 79%, #d7d7d7 100%));
+}
 
+
+// popup
+.popup{
+	position: fixed;
+	top:50%;
+	left:50%;
+	color:#fff;
+	box-shadow:0 1px 10px #000;
+	padding: 2px;
+	margin:-89px 0 0 -208px;
+	@include background-image(linear-gradient(#ffffff 0%, #464646 11%, #cccccc 24%, #959595 53%, #acacac 71%, #464646 87%, #ffffff 100%));
+	.popup__holder{
+		@include background-image(linear-gradient(left, #003182 0%, #0062af 50%, #003182 100%));
+	}
+	.popup__close{
+		position: absolute;
+		top:10px;
+		right:10px;
+		@include sized-sprite($icons, 'close');
+	}
+	h1{
+		text-transform: uppercase;
+		font-size: 23px;
+		text-shadow:0 1px 2px rgba(40,39,39,.77);
+		font-weight: normal;
+		margin:0 0 10px; 
+	}
+	p.big{
+		margin-top:31px; 
+		font-size: 21px;
+	}
+	p{
+		text-transform: uppercase;
+		font-size: 14px;
+	}
+	.row{
+		margin: 0 0 17px;
+		position: relative;
+	}
+	.input{
+		font-size: 14px;
+		font-family: 'dincondc', Arial,sans-serif; 
+		@include background-image(linear-gradient(#fefefe 0%, #f5f5f5 26%, #dadada 79%, #d7d7d7 100%));
+		border:0;
+		border-radius:4px;
+		box-shadow:0 1px 1px #000 inset, 0 1px 0 #fff;
+		width: 244px;
+		height: 25px;
+		padding: 6px 0 0; 
+		color:#636363;
+		text-transform: uppercase;
+		text-align: center;
+	}
+}
+.popup_pass{
+	@extend .popup;
+	text-align: center;
+	.popup__holder{
+		padding: 12px 0 0;
+		height: 161px;
+		width: 410px;
+	}
+	.btn_bottom{
+		@extend .btn;
+		position: absolute;
+		bottom:-17px;
+		left:50%;
+		margin: 0 0 0 -63px;
+		width: 124px;
+		padding:0; 
+	}
+}
+.mess_error{
+	position: absolute;
+	font-size: 14px;
+	color: #fff;
+	@include background-image(linear-gradient(#fe0000 0%, #f00000 27%, #cf0000 70%, #c00000 97%, #c10f0f 100%)); 
+	box-shadow:0 1px 2px #4b0000;
+	height: 31px;
+	line-height: 34px;
+	padding:0 15px 0 15px;
+	border-radius:5px;
+	text-transform: uppercase;
+	top:2px;
+	white-space: nowrap;
+	margin-right: -64px;
+	right: 100%;
+	.arr{
+		position: absolute;
+		@include sized-sprite($icons, 'error-arr');
+		top:50%;
+		margin-top:-9px;
+		right:-8px; 
+	}
+}
