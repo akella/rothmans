@@ -31,7 +31,7 @@
 	font-style: normal;
 }
 
-*{margin:0;padding:0;-webkit-text-size-adjust: none; }
+*{margin:0;padding:0;-webkit-text-size-adjust: none;}
 body{
 	font: {
 	    family: 'dincondc', Arial,sans-serif;
@@ -41,7 +41,7 @@ body{
 	line-height:1.4;
 	background: #fff url(../img/bg.jpg) no-repeat 50% 103px;
 }
-body,html{height: 100%; }
+body,html{height: 100%;}
 // resets
 a img,fieldset{
 	border:none;
@@ -55,11 +55,11 @@ a{
 // common styles
 .wrap{
 	min-height: 100%;
-	width: 100%; 
-	background: url(../img/bg-2.png); 
+	width: 100%;
+	background: url(../img/bg-2.png);
 }
 .in, .main{
-	width: 1000px; 
+	width: 1000px;
 	margin: 0 auto;
 	position: relative;
 }
@@ -82,14 +82,13 @@ a{
 	left:50px;
 	a{
 		display: block;
-		height: 100%; 
+		height: 100%;
 		@extend %hide-text;
-	} 
+	}
 }
 .nav{
 	float: right;
 	margin-right: 20px;
-	
 	ul{
 		background: url(../img/devider.png) no-repeat 0 50%;
 		display: inline-block;
@@ -98,7 +97,7 @@ a{
 		list-style: none;
 		float: left;
 		text-transform: uppercase;
-		background: url(../img/devider.png) no-repeat 100% 50%; 
+		background: url(../img/devider.png) no-repeat 100% 50%;
 		position: relative;
 		padding-right: 1px;
 	}
@@ -108,11 +107,11 @@ a{
 		text-decoration: none;
 		line-height: 65px;
 		display: block;
-		padding:0 24px; 
+		padding:0 24px;
 		margin-left: -1px;
 	}
 	.active a, .active a:hover{
-		background: #0062af; 
+		background: #0062af;
 		@include background-image(linear-gradient(#0062af, #003182));
 		color:#fff;
 		box-shadow:0 1px 0 0 #cbcbca, 0 0 8px #012476 inset, 0 2px 0 0 #b0b0b0;
@@ -129,9 +128,8 @@ a{
 	padding: 70px 0 0;
 }
 .product{
-	
 	.slider{
-		padding:0 100px 0 55px; 
+		padding:0 100px 0 55px;
 		height: 296px;
 		background: rgba(0,68,151,.8);
 		position: relative;
@@ -165,7 +163,7 @@ a{
 		@include sized-sprite($icons, 'arr-right');
 		position: absolute;
 		top:147px;
-		right: 12px; 
+		right: 12px;
 	}
 	.product__img{
 		float: left;
@@ -210,7 +208,7 @@ a{
 			color:#fff;
 			text-shadow:none;
 		}
-		background: #0062af; 
+		background: #0062af;
 		@include background-image(linear-gradient(#0062af, #003182));
 		box-shadow:0 1px 0 0 #cbcbca, 0 0 8px #012476 inset;
 		.devider{
@@ -222,7 +220,7 @@ a{
 		@include sized-sprite($icons, 'devider-arr');
 		position: absolute;
 		top:-1px;
-		right:-8px; 
+		right:-8px;
 	}
 	.arr-top{
 		display: block;
@@ -265,7 +263,7 @@ a{
 			display: inline-block;
 			list-style: none;
 			font-size: 12px;
-			padding:0 8px; 
+			padding:0 8px;
 			color:#fff;
 			border-left:1px solid;
 			line-height: 1;
@@ -280,7 +278,7 @@ a{
 	.smoking{
 		text-align: center;
 		background: #fff;
-		padding:4px 0 6px; 
+		padding:4px 0 6px;
 		span{
 			vertical-align: top;
 			@include sized-sprite($icons, 'smoking');
@@ -295,14 +293,14 @@ a{
 		position: absolute;
 		left:0;
 		width: 100%;
-		top: -24px; 
+		top: -24px;
 	}
 }
 .footer_big{
 	@extend .footer;
 	height: 123px;
 	text-align: right;
-	margin-top:-123px;  
+	margin-top:-123px;
 }
 
 
@@ -320,11 +318,21 @@ a{
 	text-transform: uppercase;
 	display: inline-block;
 	padding: 0 40px;
-	font-family: 'dincondc', Arial,sans-serif; 
+	font-family: 'dincondc', Arial,sans-serif;
 	cursor: pointer;
 	@include background-image(linear-gradient(#fefefe 0%, #f5f5f5 26%, #dadada 79%, #d7d7d7 100%));
 }
 
+.btn_bottom{
+	@extend .btn;
+	position: absolute;
+	bottom:-17px;
+	left:50%;
+	margin: 0 0 0 -63px;
+	width: 124px;
+	padding:0;
+	text-align: center;
+}
 
 // popup
 .popup{
@@ -335,6 +343,7 @@ a{
 	box-shadow:0 1px 10px #000;
 	padding: 2px;
 	margin:-89px 0 0 -208px;
+	z-index: 5;
 	@include background-image(linear-gradient(#ffffff 0%, #464646 11%, #cccccc 24%, #959595 53%, #acacac 71%, #464646 87%, #ffffff 100%));
 	.popup__holder{
 		@include background-image(linear-gradient(left, #003182 0%, #0062af 50%, #003182 100%));
@@ -350,10 +359,10 @@ a{
 		font-size: 23px;
 		text-shadow:0 1px 2px rgba(40,39,39,.77);
 		font-weight: normal;
-		margin:0 0 10px; 
+		margin:0 0 10px;
 	}
 	p.big{
-		margin-top:31px; 
+		margin-top:31px;
 		font-size: 21px;
 	}
 	p{
@@ -366,19 +375,20 @@ a{
 	}
 	.input{
 		font-size: 14px;
-		font-family: 'dincondc', Arial,sans-serif; 
+		font-family: 'dincondc', Arial,sans-serif;
 		@include background-image(linear-gradient(#fefefe 0%, #f5f5f5 26%, #dadada 79%, #d7d7d7 100%));
 		border:0;
 		border-radius:4px;
 		box-shadow:0 1px 1px #000 inset, 0 1px 0 #fff;
 		width: 244px;
 		height: 25px;
-		padding: 6px 0 0; 
+		padding: 6px 0 0;
 		color:#636363;
 		text-transform: uppercase;
 		text-align: center;
 	}
 }
+
 .popup_pass{
 	@extend .popup;
 	text-align: center;
@@ -394,14 +404,101 @@ a{
 		left:50%;
 		margin: 0 0 0 -63px;
 		width: 124px;
-		padding:0; 
+		padding:0;
 	}
 }
+
+.popup_login{
+	@extend .popup;
+	text-align: center;
+	margin: -112px 0 0 -163px;
+	.input{width: 272px;}
+	.popup__holder{
+		padding: 12px 0 0;
+		width: 322px;
+		padding-top: 10px;
+		height: 211px;
+		}
+	.mess_error{margin-right: -9px;}
+	.link_reg{
+		font-size: 16px;
+		color:#fff;
+	}
+	.link_pass{
+		font-size: 14px;
+		color:#fff;
+	}
+	.row_check{
+		float: right;
+		label{
+			font-size: 14px;
+			color: #fff;
+		}
+		.check{display: inline-block;}
+	}
+}
+
+.popup_thanks{
+	@extend .popup;
+	margin-left: -273px;
+	margin-top: -126px;
+	.popup__holder{
+		height: 253px;
+		width: 453px;
+		padding: 12px 45px 0;
+	}
+	text-align: center;
+	background-size: 100% auto;
+	h1{margin: 0 0 19px;}
+	p{
+		font-size: 16px;
+		line-height: 1.2;
+		margin: 0 0 16px;
+	}
+}
+
+.check{
+	border-radius: 3px;
+	background: #fff;
+	box-shadow: 0 1px 1px #000 inset,0 1px 0 #fff;
+	@include background-image(linear-gradient(rgba(0,0,0,.25), rgba(255,255,255,.25)));
+	width: 16px;
+	height: 16px;
+	position: relative;
+	input{
+		opacity: 0;
+		width: 16px;
+		height: 16px;
+		position: absolute;
+		top:0;
+		left: 0;
+	}
+	span{
+		height: 8px;
+		width: 8px;
+		background: #0061ae;
+		box-shadow: 0 1px 1px #000 inset,0 1px 0 #fff;
+		border-radius: 2px;
+		position: absolute;
+		top: 5px;
+		left: 4px;
+		@include background-image(linear-gradient(rgba(0,0,0,.25), rgba(255,255,255,.25)));
+	}
+}
+
+.left-block{
+	text-align:left;
+	padding: 0 25px;
+	margin-top: -1px;
+	
+	text-transform: uppercase;
+}
+
 .mess_error{
 	position: absolute;
 	font-size: 14px;
 	color: #fff;
-	@include background-image(linear-gradient(#fe0000 0%, #f00000 27%, #cf0000 70%, #c00000 97%, #c10f0f 100%)); 
+	@include background-image(linear-gradient(#fe0000 0%, #f00000 27%, #cf0000 70%, #c00000 97%, #c10f0f 100%));
 	box-shadow:0 1px 2px #4b0000;
 	height: 31px;
 	line-height: 34px;
@@ -417,6 +514,6 @@ a{
 		@include sized-sprite($icons, 'error-arr');
 		top:50%;
 		margin-top:-9px;
-		right:-8px; 
+		right:-8px;
 	}
 }
