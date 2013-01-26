@@ -16,4 +16,7 @@ $(document).ready(function() {
 		};
 		return false;
 	});
+
+	$('#scrollbar').tinyscrollbar({ sizethumb: 54 });
+
 });

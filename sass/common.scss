@@ -128,12 +128,12 @@ a{
 	padding: 70px 0 0;
 }
 .product{
-	.slider{
+	.slider, .product__block{
 		padding:0 100px 0 55px;
 		height: 296px;
 		background: rgba(0,68,151,.8);
 		position: relative;
-		overflow: hidden;
+		//overflow: hidden;
 		margin-bottom: 25px;
 		h1{
 			font-size: 25px;
@@ -146,6 +146,16 @@ a{
 			color: #fff;
 			line-height: 1.15;
 			margin-bottom: 16px;
+		}
+	}
+	.product__block{
+		padding:0 28px 0 51px;
+		height: 275px;
+	}
+	.faq__q{
+		p{
+			margin: 10px 0 10px 32px;
+			font-size: 16px;
 		}
 	}
 	.slide{
@@ -736,3 +746,126 @@ a{
 		right:-8px;
 	}
 }
+.faq{
+	float: left;
+	h2{
+		color:#fff;
+		font-weight: normal;
+		font-size: 18px;
+		margin: 0 0 7px;
+		cursor: pointer;
+		.arr{
+			height: 19px;
+			width: 19px;
+			top: 4px;
+			margin-right: 11px;
+			border-radius: 3px;
+			background: #fefefe;
+			position: relative;
+			border: 1px solid #e6e6e6;
+			display: inline-block;
+			box-shadow: 0 1px 1px #fff inset, 0 1px 2px rgba(0,0,0,.4);
+			@include background-image(linear-gradient( #fefefe, #bebebd ));
+			span{
+				@include sized-sprite($icons, 'more-arr');
+				position: absolute;
+				left:4px;
+				top:7px;
+			}
+		}
+	}
+	.faq__q{
+		p{
+			font-size: 16px;
+			display: none;
+		}
+	}
+	.faq__q_open{
+		@extend .faq__q;
+		p{display: block;}
+		.arr span{
+			@include sized-sprite($icons, 'more-arr2');
+			top:6px;
+		}
+	}
+}
+.faq-new{
+	float: right;
+	width: 315px;
+	position: relative;
+	height: 278px;
+	.faq-new-ans{
+		height: 278px;
+		text-align: center;
+		p{
+			font-size: 18px;
+			line-height: 278px;
+			margin: 0;
+		}
+	}
+	.textarea{
+		margin-top: 43px;
+		width: 287px;
+		height: 163px;
+		padding: 11px 14px;
+		border-radius: 3px;
+		background: #fff;
+		@include background-image(linear-gradient( rgba(white,.15), rgba(0,0,0,.15) ));
+		border:0;
+		box-shadow: 0 1px 1px #000 inset, 0 1px 0 #fff;
+		color: #898989;
+		font-size: 14px;
+		font-family: 'dincondc', Arial,sans-serif;
+		text-transform: uppercase;
+		resize:none;
+	}
+}
+#scrollbar {
+	width: 543px;
+	clear: both;
+	margin: 18px 0 20px;
+}
+#scrollbar .viewport {
+	width: 523px;
+	height: 244px;
+	overflow: hidden;
+	position: relative;
+}
+#scrollbar .overview {
+	list-style: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+#scrollbar .scrollbar {
+	position: relative;
+	float: right;
+	width: 15px;
+}
+#scrollbar .track {
+	background-color: #007fe2;
+	height: 100%;
+	width:5px;
+	position: relative;
+	box-shadow: 0 1px 2px #0079d7;
+	border-radius: 2px;
+}
+#scrollbar .thumb {
+	@include sized-sprite($icons, 'scroll');
+	width: 9px;
+	height: 54px;
+	cursor: pointer;
+	margin-left: -2px;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+}
+#scrollbar .disable{ display: none; }
+.noSelect {
+	user-select: none;
+	-o-user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+}
+
