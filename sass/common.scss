@@ -7,7 +7,7 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
+$blue : rgba(0,68,151,.8);
 *{margin:0;padding:0;-webkit-text-size-adjust: none;}
 body{
 	font: {
@@ -109,9 +109,8 @@ a{
 	.slider, .product__block{
 		padding:0 100px 0 55px;
 		height: 296px;
-		background: rgba(0,68,151,.8);
+		background: $blue;
 		position: relative;
-		//overflow: hidden;
 		margin-bottom: 25px;
 		h1{
 			font-size: 25px;
@@ -870,10 +869,134 @@ a{
 	-webkit-user-select: none;
 }
 .map{
-	height: 100%;
+	position: relative;
 	.london{
-		img{
-			display: block;
+		background: url(../img/map.jpg)no-repeat 50% 0;
+		img{vertical-align: top;}
+	}
+}
+.steps{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 10px 0 5px 0;
+	background: $blue;
+	.steps__title{
+		font-size: 25px;
+		color: #fff;
+		text-shadow: 0 1px 2px rgba(0,0,0,.77);
+		float: left;
+		padding-left: 49px;
+	}
+	.steps__list{
+		float: left;
+		margin: 2px 0 0 -4px;
+		li{
+			float: left;
+			list-style: none;
+			cursor: pointer;
+			width: 24px;
+			height: 24px;
+			line-height: 24px;
+			text-align: center;
+			position: relative;
+			background: #fff;
+			@include background-image(linear-gradient( rgba(white,.3), rgba(0,0,0,.3) ));
+			box-shadow: 0 2px 0 #fff inset, 0 1px 2px rgba(0,0,0,.4);
+			margin-left: 15px;
+			border-radius: 2px;
+			&:first-child .line{display: none;}
+		}
+		.point{
+			display: inline-block;
+			vertical-align: middle;
+			@include sized-sprite($icons, 'point');
+		}
+		.query{
+			display: inline-block;
+			vertical-align: middle;
+			@include sized-sprite($icons, 'question');
+		}
+		.line{
+			position: absolute;
+			top: 50%;
+			left:-15px;
+			width: 15px;
+			height: 4px;
+			margin-top: -2px;
+			background: #fff;
+			@include background-image(linear-gradient( rgba(white,.3), rgba(0,0,0,.3) ));
+			box-shadow: 0 2px 0 #fff inset, 0 1px 2px rgba(0,0,0,.4);
+		}
+		.active{
+			background: #ed1c24;
+			@include background-image(linear-gradient( #eb1c24, #9f1318 ));
+			box-shadow: 0 2px 0 rgba(white,.3) inset, 0 1px 2px rgba(0,0,0,.4);
+			.point{
+				@include sized-sprite($icons, 'point2');
+			}
+			.query{
+				@include sized-sprite($icons, 'question2');
+			}
+			.line{
+				background: #ed1c24;
+				@include background-image(linear-gradient( #eb1c24, #9f1318 ));
+				box-shadow: 0 2px 0 rgba(white,.3) inset, 0 1px 2px rgba(0,0,0,.4);
+			}
 		}
 	}
+}
+.indicator{
+	float: right;
+	padding-right: 96px;
+	position: relative;
+	.indicator__name{
+		font-size: 25px;
+		color: #fff;
+		text-shadow: 0 1px 2px rgba(0,0,0,.77);
+		float: right;
+	}
+	.indicator__point{
+		position: absolute;
+		right: 5px;
+		bottom: -5px;
+	}
+}
+.indicator_cold{
+	.indicator__point{
+		@include sized-sprite($icons, 'cold');
+	}
+}
+.indicator_hot{
+	.indicator__point{
+		@include sized-sprite($icons, 'hot');
+	}
+}
+.indicator_cold{
+	.indicator__point{
+		@include sized-sprite($icons, 'cold');
+	}
+}
+.indicator_warm{
+	.indicator__point{
+		@include sized-sprite($icons, 'warm');
+	}
+}
+.indicator_freeze{
+	.indicator__point{
+		@include sized-sprite($icons, 'freeze');
+	}
+}
+
+.map__point{
+	@include sized-sprite($icons, 'marker');
+	position: absolute;
+	top:190px;
+	left:265px;
+}
+.history{
+	@include sized-sprite($icons, 'history');
+	position: absolute;
+	top:35px;
+	right: 17px;
 }
