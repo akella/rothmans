@@ -991,7 +991,7 @@ a{
 .map__point{
 	@include sized-sprite($icons, 'marker');
 	position: absolute;
-	top:190px;
+	top:150px;
 	left:265px;
 }
 .history{
@@ -999,4 +999,43 @@ a{
 	position: absolute;
 	top:35px;
 	right: 17px;
+}
+.hint{
+	position: absolute;
+	padding:0 17px;
+	height: 37px;
+	line-height: 37px;
+	background: #ffffff;
+	@include background-image(linear-gradient( #ffffff, #dfdfdf ));
+	box-shadow:0 2px 0 #fff inset, 0 1px 1px rgba(0,0,0,.2);
+	color: #0062af;
+	text-shadow:0 1px 0 #fff;
+	border-radius: 3px;
+	.arr{
+		
+		position: absolute;
+		
+	}
+}
+.hint_top{
+	@extend .hint;
+	.arr{
+		@include sized-sprite($icons, 'arr-bottom');
+		bottom:-11px;
+		left:28px;
+	}
+}
+.hint_left{
+	@extend .hint;
+	.arr{
+		@include sized-sprite($icons, 'arr-right2');
+		right: -10px;
+		top: 11px;
+	}
+}
+.arr4{
+	margin: 0 10px 0 -5px;
+	display: inline-block;
+	@include sized-sprite($icons, 'arr4');
+	vertical-align: middle;
 }
