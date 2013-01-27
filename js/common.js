@@ -46,7 +46,7 @@ $(document).ready(function() {
 	});
 
 	//scrollbar
-	if ($('.popup').exists()){
+	if ($('#scrollbar').exists()){
 		$('#scrollbar').tinyscrollbar({ sizethumb: 54 });
 	};
 
