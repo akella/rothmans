@@ -1,27 +1,4 @@
 @import "base";
-// =======Sprites
-// .whatever{
-// 	@include sized-sprite($icons, badge_hit);
-// 	@include retina{
-// 		@include sized-sprite($icons, badge_new);
-// 	}
-// }
-// =======animation example
-// @include keyframes(rotate) {
-//    from {
-//       @include rotate(0);
-//    }
-//    to {
-//       @include rotate(360);
-//    }
-// }
-// body:hover{
-// 	@include animation(rotate 200s linear infinite);
-// }
-// ========gradient example
-// body{
-// @include background-image(linear-gradient(#232323, #5c5c5c));
-// }
 
 @font-face {
 	font-family: 'dincondc';
@@ -59,7 +36,7 @@ a{
 	width: 100%;
 	background: url(../img/bg-2.png);
 }
-.in, .main{
+.in, .main, .map{
 	width: 1000px;
 	margin: 0 auto;
 	position: relative;
@@ -81,6 +58,7 @@ a{
 	position: absolute;
 	top:0;
 	left:50px;
+	z-index: 20;
 	a{
 		display: block;
 		height: 100%;
@@ -349,16 +327,19 @@ a{
 	padding:0;
 	text-align: center;
 }
-.btn_file{
+.btn_file, .btn_web{
 	@extend .btn;
-	width: 214px;
 	padding:0;
-	margin: 0 23px 0 -2px;
 	text-align: center;
-	display: inline-block;
-	position: relative;
 	overflow: hidden;
 	line-height: 38px;
+	width: 214px;
+}
+.btn_file-out, .btn_web-out{
+	display: inline-block;
+	margin: 0 23px 0 -2px;
+	position: relative;
+	width: 214px;
 	input{
 		position: absolute;
 		width: 215px;
@@ -366,9 +347,24 @@ a{
 		left:100%;
 		opacity: 0;
 		cursor: pointer;
+		display: none;
 	}
 }
-.btn_holder{
+
+.btn_web-out{
+	.mess_error{
+		right: auto;
+		left:100%;
+		margin-left: 20px;
+		.arr{
+			@include sized-sprite($icons, 'error-arr2');
+			left:-8px;
+			right: auto;
+		}
+	}
+}
+
+.btn-holder{
 	margin: 15px 0 25px;
 }
 .btn_bottom_left{
@@ -390,7 +386,6 @@ a{
 	box-shadow:0 1px 1px #000 inset, 0 1px 0 #fff;
 	height: 31px;
 	position: relative;
-	//float: left;
 	display: inline-block;
 	.select__text{
 		padding: 8px 24px 0 7px;
@@ -398,6 +393,7 @@ a{
 		color: #555;
 		text-shadow:0 1px 0 #fff;
 		display: block;
+		height: 20px;
 	}
 	.select__arr{
 		position: absolute;
@@ -412,23 +408,27 @@ a{
 		width: 100%;
 		opacity: 0;
 		height: 31px;
+		font-family: 'dincondc', Arial,sans-serif;
+		-webkit-appearance:none;
+		font-size: 14px;
+		font-weight: normal;
+		color: #555;
+		text-transform: uppercase;
+		line-height: 20px;
 	}
 }
 
 .select_d{
-	@extend .select;
 	width: 48px;
 	margin-right: 9px;
 }
 
 .select_m{
-	@extend .select;
 	width: 106px;
 	margin-right: 9px;
 }
 
 .select_y{
-	@extend .select;
 	width: 96px;
 }
 
@@ -490,8 +490,7 @@ a{
 		border-radius:4px;
 		box-shadow:0 1px 1px #000 inset, 0 1px 0 #fff;
 		width: 244px;
-		height: 25px;
-		padding: 6px 0 0;
+		height: 31px;
 		color:#636363;
 		text-align: center;
 	}
@@ -714,8 +713,10 @@ a{
 		position: absolute;
 		top: 5px;
 		left: 4px;
+		display: none;
 		@include background-image(linear-gradient(rgba(0,0,0,.25), rgba(255,255,255,.25)));
 	}
+	&.checked span{display: block;}
 }
 
 .left-block{
@@ -868,4 +869,11 @@ a{
 	-khtml-user-select: none;
 	-webkit-user-select: none;
 }
-
+.map{
+	height: 100%;
+	.london{
+		img{
+			display: block;
+		}
+	}
+}
