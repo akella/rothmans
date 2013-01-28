@@ -1,5 +1,5 @@
 @import "base";
-
+//$experimental-support-for-svg: true;
 @font-face {
 	font-family: 'dincondc';
 	src: url('fonts/dincondc.eot');
@@ -153,7 +153,7 @@ a{
 	}
 	.product__img{
 		float: left;
-		height: 296px;
+		height: 275px;
 		padding-top: 21px;
 		margin-right: 17px;
 		width: 186px;
@@ -452,8 +452,12 @@ a{
 	padding: 2px;
 	margin:-89px 0 0 -208px;
 	z-index: 105;
+	zoom:1;
+	background-color: #fff ;
+	background-size: 100%;
 	@include background-image(linear-gradient(#ffffff 0%, #464646 11%, #cccccc 24%, #959595 53%, #acacac 71%, #464646 87%, #ffffff 100%));
 	.popup__holder{
+		background-color: #003182; 
 		@include background-image(linear-gradient(left, #003182 0%, #0062af 50%, #003182 100%));
 	}
 	.popup__close{
@@ -643,7 +647,6 @@ a{
 		width: 100%;
 	}
 }
-
 .pack-list{
 	list-style: none;
 	li{
@@ -653,11 +656,9 @@ a{
 		line-height:348px;
 		text-align: center;
 		padding: 60px 0 81px;
-		img{vertical-align: bottom;}
+		img{vertical-align: middle;}
 	}
-	.active{
-		display: inline-block;
-	}
+	.active{display:block;}
 }
 .pack-nav-list{
 	list-style: none;

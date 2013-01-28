@@ -1,5 +1,46 @@
 .lteie8{
-	body{
-		background:red;
+	.header{background: #fff url(../img/bg-header.png) repeat-x 0 100%;}
+	.nav .active a, .nav .active a:hover{background: #00519f url(../img/bg-nav.png) repeat-x 0 100%;}
+	.product .slider, .product  .product__block, .steps{background: url(../img/bg-blue.png); }
+	.product .slide{background: transparent !important;}
+	.product__nav ul{background: #ffffff url(../img/bg-product.png) repeat-x 0 100%;}
+	.product__nav .active{background: #004e9c url(../img/bg-product-2.png) repeat-x 0 100%;}
+	.hint{
+		background: #fefefe url(../img/bg-btn.png) repeat-x 0 100%;
+	}
+	.popup{
+		background: #fff url(../img/grad_login-2.png) repeat-x 0 50%;
+		.popup__holder{background: #003182 url(../img/grad_login.png) repeat-y 50% 0;}
+		.input{line-height: 31px;}
+	}
+	.popup_login{
+		background: #fff url(../img/grad_login-2.png) repeat-x 0 50%;
+		.popup__holder{background: #003182 url(../img/grad_login.png) repeat-y 50% 0; }
+	}
+	.popup_pass{
+		background: #fff url(../img/grad_pass-2.png) repeat-x 0 50%;
+		.popup__holder{background: #003182 url(../img/grad_pass.png) repeat-y 50% 0; }
+	}
+	.popup_reg{
+		background: #fff url(../img/grad_reg-2.png) repeat-x 0 50%;
+		.popup__holder{background: #003182 url(../img/grad_reg.png) repeat-y 50% 0; }
+	}
+	.popup_thanks{
+		background: #fff url(../img/grad_thanks-2.png) repeat-x 0 50%;
+		.popup__holder{background: #003182 url(../img/grad_reg.png) repeat-y 50% 0; }
+	}
+	.popup_query{
+		background: #fff url(../img/grad_query-2.png) repeat-x 0 50%;
+		.popup__holder{background: #003182 url(../img/grad_query.png) repeat-y 50% 0; }
+	}
+	.popup_pack{
+		background: #fff url(../img/grad_pack-2.png) repeat-x 0 50%;
+		.popup__holder{background: url("../img/bg-grad.jpg") 50% 50%; }
+	}
+	.mess_error{
+		background: #fe0000 url(../img/error.png) repeat-x 0 100%;
+	}
+	.btn{
+		background: #fefefe url(../img/bg-btn.png) repeat-x 0 100%;
 	}
 }

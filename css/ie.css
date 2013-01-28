@@ -1,1 +1,24 @@
-.lteie8 body { background: red; }
+.lteie8 .header { background: white url(../img/bg-header.png) repeat-x 0 100%; }
+.lteie8 .nav .active a, .lteie8 .nav .active a:hover { background: #00519f url(../img/bg-nav.png) repeat-x 0 100%; }
+.lteie8 .product .slider, .lteie8 .product .product__block, .lteie8 .steps { background: url(../img/bg-blue.png); }
+.lteie8 .product .slide { background: transparent !important; }
+.lteie8 .product__nav ul { background: white url(../img/bg-product.png) repeat-x 0 100%; }
+.lteie8 .product__nav .active { background: #004e9c url(../img/bg-product-2.png) repeat-x 0 100%; }
+.lteie8 .hint { background: #fefefe url(../img/bg-btn.png) repeat-x 0 100%; }
+.lteie8 .popup { background: white url(../img/grad_login-2.png) repeat-x 0 50%; }
+.lteie8 .popup .popup__holder { background: #003182 url(../img/grad_login.png) repeat-y 50% 0; }
+.lteie8 .popup .input { line-height: 31px; }
+.lteie8 .popup_login { background: white url(../img/grad_login-2.png) repeat-x 0 50%; }
+.lteie8 .popup_login .popup__holder { background: #003182 url(../img/grad_login.png) repeat-y 50% 0; }
+.lteie8 .popup_pass { background: white url(../img/grad_pass-2.png) repeat-x 0 50%; }
+.lteie8 .popup_pass .popup__holder { background: #003182 url(../img/grad_pass.png) repeat-y 50% 0; }
+.lteie8 .popup_reg { background: white url(../img/grad_reg-2.png) repeat-x 0 50%; }
+.lteie8 .popup_reg .popup__holder { background: #003182 url(../img/grad_reg.png) repeat-y 50% 0; }
+.lteie8 .popup_thanks { background: white url(../img/grad_thanks-2.png) repeat-x 0 50%; }
+.lteie8 .popup_thanks .popup__holder { background: #003182 url(../img/grad_reg.png) repeat-y 50% 0; }
+.lteie8 .popup_query { background: white url(../img/grad_query-2.png) repeat-x 0 50%; }
+.lteie8 .popup_query .popup__holder { background: #003182 url(../img/grad_query.png) repeat-y 50% 0; }
+.lteie8 .popup_pack { background: white url(../img/grad_pack-2.png) repeat-x 0 50%; }
+.lteie8 .popup_pack .popup__holder { background: url("../img/bg-grad.jpg") 50% 50%; }
+.lteie8 .mess_error { background: #fe0000 url(../img/error.png) repeat-x 0 100%; }
+.lteie8 .btn { background: #fefefe url(../img/bg-btn.png) repeat-x 0 100%; }

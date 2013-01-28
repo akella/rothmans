@@ -45,6 +45,13 @@ $(document).ready(function() {
 		$(this).prev('.select__text').html($(this).val());
 	});
 
+	//pack-list
+	$('.pack-nav-list li').click(function() {
+		if (!($(this).hasClass('active'))) $(this).addClass('active').siblings().removeClass('active')
+			.parents('.popup__holder').find('.pack-list li').eq($(this).index()).addClass('active').fadeIn(150).siblings('.pack-list li').removeClass('active').hide();
+		return false;
+	});
+
 	//scrollbar
 	if ($('#scrollbar').exists()){
 		$('#scrollbar').tinyscrollbar({ sizethumb: 54 });
