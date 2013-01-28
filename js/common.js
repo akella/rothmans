@@ -48,13 +48,23 @@ $(document).ready(function() {
 	//pack-list
 	$('.pack-nav-list li').click(function() {
 		if (!($(this).hasClass('active'))) $(this).addClass('active').siblings().removeClass('active')
-			.parents('.popup__holder').find('.pack-list li').eq($(this).index()).addClass('active').fadeIn(150).siblings('.pack-list li').removeClass('active').hide();
+			.parent().prev('.pack-list').children().eq($(this).index()).addClass('active').fadeIn(150).siblings('.pack-list li').removeClass('active').hide();
 		return false;
 	});
 
-	//scrollbar
+
+
+
+	//faq
+	$('.faq__q, .faq__q_open').click(function() {
+		if (!($(this).hasClass('faq__q_open'))) $(this).removeClass('faq__q').addClass('faq__q_open')
+			else $(this).removeClass('faq__q_open').addClass('faq__q');
+	});
+
+
 	if ($('#scrollbar').exists()){
 		$('#scrollbar').tinyscrollbar({ sizethumb: 54 });
 	};
+
 
 });
